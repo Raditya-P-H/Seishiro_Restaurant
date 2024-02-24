@@ -80,7 +80,7 @@ class AdminController extends Controller
         return view('admin.tambahdatauser');
     }
 
-    public function tambahdatauser(Request $request)
+    public function tambahdatauser(Request $request, user $user)
     {
         $cek = $request->validate([
             'nama'=>'required',
@@ -95,6 +95,7 @@ class AdminController extends Controller
             'password'=> bcrypt($request->password),
             'role'=> $request->role,
         ]);
+        $user->update();
         return redirect()->route('kelolauser');
     }
 

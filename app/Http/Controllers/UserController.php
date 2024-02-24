@@ -36,25 +36,7 @@ class UserController extends Controller
             }
             return redirect()->route('login')->with('status', 'email atau password salah');
         }
-        // if (Auth::attempt($cek)) {
-        //     $user=Auth::user();
-        //     if ($user->role-'admin') {
-        //     }elseif ($user->role-'user') {
-        //         return redirect()->route('homeuser')->with('status', 'Selamat Datang' .$user->name);
-        //     }elseif ($user->role-'kasir') {
-        //         return redirect()->route('konfirbayar')->with('status', 'Selamat Datang' .$user->name);
-        //     }elseif ($user->role-'owner') {
-        //         return redirect()->route('summary')->with('status', 'Selamat Datang' .$user->name);
-        //     }else {
-        //         return redirect()->route('homeuser');
-        //     }
-        //     if ($user->role-'admin') {
-        //         return redirect()->route('homeadmin')->with('status', 'Selamat Datang' .$user->name);
-        //     } else {
-        //         return redirect()->route('homeuser')->with('status', 'Selamat Datang' .$user->name);
-        //     }
-        // }
-        // return back()->with('status', 'email atau password salah');
+
     }
 
     public function logout() {
@@ -102,6 +84,42 @@ class UserController extends Controller
         $detailtransaksi = DetailTransaksi::where('user_id', auth()->id())->where('status', 'pesanan di proses')->get();
         return view('user.riwayat', compact('detailtransaksi'));
     }
+
+    public function checkout(Request $request)
+    {
+        $detailtransaksi = detailtransaksi::where('user_id', auth()->id())->where('status','masuk keranjang')->get();
+
+        foreach ($detailtransaksi as $detailtransaksi) {
+            $detailtransaksi->update([
+                'status'=>'pesanan di proses',
+            ]);
+
+        }
+
+        log::create([
+            'user_id'=>Auth::id(),
+            'activity'=>'user konfirmasi pesanan'
+        ]);
+
+        return redirect()->route('riwayat')->with('status','Pesanan terbuat.Mohon tunggu di meja anda.');
+    }
+
+    public function hapuspesanan($id)
+    {
+        $detailtransaksi = detailtransaksi::findOrFail($id);
+        $detailtransaksi->delete();
+        return redirect()->route('keranjang')->with('status','pesanan terhapus');
+    }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+
+        $menu = menu::where('name', 'LIKE', "%$keyword%")->get();
+
+        return view('homeuser', compact('menu'));
+    }
+
 }
 
 

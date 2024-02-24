@@ -75,4 +75,24 @@ class KasirController extends Controller
         $pdf = Facade::loadView('kasir.struk', compact('transaksi', 'detailtransaksi', 'totalharga'));
         return $pdf->download('struk.pdf');
     }
+
+    public function statusmeja()
+    {
+      $users = User::where('role', 'user')->get();
+      return view('kasir.statusmeja', ['users' => $users]);
+    }
+
+    public function konfiselesai($transaksi_id)
+    {
+        $detailtransaksi = detailtransaksi::where('transaksi_id', $transaksi_id);
+        $detailtransaksi->update(['status'=> 'selesai']);
+        return redirect()->back()->with('status', 'Transaksi Selesai Dikonfirmasi!');
+    }
+
+    public function hapustransaksi($no_meja)
+    {
+        $detailtransaksi = detailtransaksi::where('no_meja', $no_meja)->where('status', 'Pesanan Di Proses!');
+        $detailtransaksi->delete();
+        return redirect()->back()->with('status', 'Transaksi Terhapus!');
+    }
 }

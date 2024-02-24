@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container mt-5">
-        <form action="{{ route('tambahdatauser') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('tambahdatauser') }}" method="POST" enctype="multipart/form-data" class="AdminController" >
         @csrf
         <div class="row">
             <div class="card col-4 mx-auto">

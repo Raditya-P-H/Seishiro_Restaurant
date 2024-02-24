@@ -33,6 +33,8 @@
             </form>
         </div>
 
+        @include('template.footer')
+
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 </body>
 </html>

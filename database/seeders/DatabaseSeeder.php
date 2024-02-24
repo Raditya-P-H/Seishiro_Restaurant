@@ -52,7 +52,7 @@ class DatabaseSeeder extends Seeder
        Menu::Create([
         'nama'=>'Takoyaki',
         'foto'=>'img/takoyaki.jpg',
-        'harga'=>20000,
+        'harga'=>20.000,
         'kategori_id'=>1,
         'catatan'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, cumque voluptatibus voluptas eum distinctio quis quam quasi, cupiditate nesciunt sint ipsa eaque omnis laborum corporis rerum. Reprehenderit rerum nisi eos!',
         'user_id' => '1'
@@ -61,7 +61,7 @@ class DatabaseSeeder extends Seeder
        Menu::Create([
         'nama'=>'Sushi',
         'foto'=>'img/Sushi.jpg',
-        'harga'=>25000,
+        'harga'=>25.000,
         'kategori_id'=>1,
         'catatan'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, cumque voluptatibus voluptas eum distinctio quis quam quasi, cupiditate nesciunt sint ipsa eaque omnis laborum corporis rerum. Reprehenderit rerum nisi eos!',
         'user_id' => '1'
@@ -70,7 +70,7 @@ class DatabaseSeeder extends Seeder
        Menu::Create([
         'nama'=>'Ramen',
         'foto'=>'img/ramen.jpg',
-        'harga'=>20000,
+        'harga'=>20.000,
         'kategori_id'=>1,
         'catatan'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, cumque voluptatibus voluptas eum distinctio quis quam quasi, cupiditate nesciunt sint ipsa eaque omnis laborum corporis rerum. Reprehenderit rerum nisi eos!',
         'user_id' => '1'
@@ -79,7 +79,7 @@ class DatabaseSeeder extends Seeder
        Menu::Create([
         'nama'=>'Matcha Tea',
         'foto'=>'img/matcha.jpg',
-        'harga'=>15000,
+        'harga'=>15.000,
         'kategori_id'=>2,
         'catatan'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, cumque voluptatibus voluptas eum distinctio quis quam quasi, cupiditate nesciunt sint ipsa eaque omnis laborum corporis rerum. Reprehenderit rerum nisi eos!',
         'user_id' => '1'
@@ -88,7 +88,7 @@ class DatabaseSeeder extends Seeder
        Menu::Create([
         'nama'=>'Apple Tea',
         'foto'=>'img/apple.jpg',
-        'harga'=>15000,
+        'harga'=>15.000,
         'kategori_id'=>2,
         'catatan'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, cumque voluptatibus voluptas eum distinctio quis quam quasi, cupiditate nesciunt sint ipsa eaque omnis laborum corporis rerum. Reprehenderit rerum nisi eos!',
         'user_id' => '1'
@@ -97,7 +97,7 @@ class DatabaseSeeder extends Seeder
        Menu::Create([
         'nama'=>'American Coffee',
         'foto'=>'img/americano.jpg',
-        'harga'=>15000,
+        'harga'=>15.000,
         'kategori_id'=>2,
         'catatan'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, cumque voluptatibus voluptas eum distinctio quis quam quasi, cupiditate nesciunt sint ipsa eaque omnis laborum corporis rerum. Reprehenderit rerum nisi eos!',
         'user_id' => '1'

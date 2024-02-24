@@ -37,6 +37,7 @@
         </tbody>
     </table>
     </div>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script>
         $('#example').DataTable({
             responsive: true

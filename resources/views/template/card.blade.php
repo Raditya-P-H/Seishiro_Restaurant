@@ -19,7 +19,7 @@
 <body class="bd">
     <div class="container mt-5">
         <div class="row">
-            @foreach($menu as $item)
+            @foreach($menu as $item)        
             <div class="col-2 mt-5">
                 <div class="card">
                     <img src="{{ asset($item->foto) }}" alt="" height="100px" class="card-img-top">

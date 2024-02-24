@@ -18,7 +18,7 @@
 
 <body>
     <div class="container mt-5" style="margin-left:  35%">
-        <div class="card p-4" style="width: 35%; background: border-box; border-color: white;">
+        <div class="card p-4" style="width: 35%; background: border-box;">
             <center>
                 <h3>Login <br> Seishiro Menu</h3>
             </center>

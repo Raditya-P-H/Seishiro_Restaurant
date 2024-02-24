@@ -14,7 +14,7 @@
         <a href="{{ route('konfirbayar') }}" class="nav-link text-light p-2"> Kasir </a>
         <a href="{{ route('homeuser') }}" class="nav-link text-light p-2"> Menu </a>
         <a href="" class="nav-link text-light p-2"> Orderan </a>
-        <a href="{{ route('keranjang') }}" class="nav-link text-light p-2"> keranjang </a>
+        <a href="{{ route('keranjang') }}" class="nav-link text-light p-2"> Keranjang </a>
         <a href="{{ route('logout') }}" class="nav-link  text-light p-2">Logout</a>
     </nav>
 </body>

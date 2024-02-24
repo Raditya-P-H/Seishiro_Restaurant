@@ -23,6 +23,7 @@
         @endif
 
         <a href="{{ route('tambah') }}" class="btn btn-primary mb-4">Tambah Data</a>
+        <a href="{{ route('kelolauser') }}" class="btn btn-success mb-4">Kelola User</a>
         <table class="table table-bordered mt-5" id="example">
             <thead>
                 <tr>
